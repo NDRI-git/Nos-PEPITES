@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nos PEPITES</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="promo">
+🔥 PROMOTION -50% AUJOURD'HUI
+</div>
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+Nos <span>PEPITES</span>
+</div>
+
+<div class="search">
+ Livraison gratuite sur toutes vos commandes
+</div>
+
+<div class="cart">
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- PRODUITS -->
+
+<section class="products">
+
+<h2 class="title">Nos Produits</h2>
+
+<div class="product-grid">
+
+<div class="product">
+
+<img src="images/push-up 1.png">
+
+<h3>Push-Up Invisible</h3>
+
+<p class="price">6500 FCFA</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/2250101976381?text=Bonjour je veux commander Push Up Invisible">
+
+<button class="btn whatsapp">
+Commander WhatsApp
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product">
+
+<img src="images/push-up.png">
+
+<h3>Push-Up Invisible</h3>
+
+<p class="price">2 à 10.000 FCFA</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/2250101976381?text=Bonjour je veux commander un push-up">
+
+<button class="btn whatsapp">
+Commander WhatsApp
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product">
+
+<video src="images/video push-up.mp4" autoplay loop muted></video>
+<h3>Push-up Invisible</h3>
+
+<div class="buttons">
+
+<a href="https://wa.me/2250101976381?text=Bonjour je veux commander un push-up">
+
+<button class="btn whatsapp">
+Commander WhatsApp
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="timer" id="timer"></div>
+
+</section>
+
+<!-- GARANTIES -->
+
+<section class="features">
+
+<div class="feature-grid">
+
+<div>🚚 Livraison rapide</div>
+<div>💳 Paiement sécurisé</div>
+<div>🔄 Retour possible</div>
+<div>⭐ Produits certifiés</div>
+
+</div>
+
+</section>
+
+<!-- AVIS -->
+
+<section class="reviews">
+
+<h2>Avis Clients ⭐⭐⭐⭐⭐</h2>
+
+<div class="review-grid">
+
+<div class="review">
+Très bonne qualité !<br><b>Aïcha</b>
+</div>
+
+<div class="review">
+Produit identique aux photos.<br><b>Mariam</b>
+</div>
+
+<div class="review">
+Livraison rapide.<br><b>Fatou</b>
+</div>
+
+</div>
+
+</section>
+
+<!-- PAIEMENT WAVE -->
+
+<section class="wave">
+
+<h2>Paiement Wave</h2>
+
+<p>Envoyez le paiement au numéro :</p>
+
+<h1>07 97 26 89 29</h1>
+
+<p>
+Après paiement, envoyez la capture sur WhatsApp pour confirmer votre commande.
+</p>
+
+<a href="https://wa.me/2250101976381">
+
+<button class="btn whatsapp">
+Envoyer la capture WhatsApp
+</button>
+
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Nos PEPITES</p>
+<p>Abidjan - Côte d'Ivoire</p>
+
+</footer>
+
+
+<div id="purchase-popup">
+    <span id="purchase-text"></span>
+  </div>
+
+ <script>
+    let names=["Aïcha","Mariam","Fatou","Aminata","Sarah","Emma","Audrey","Ashley","Victoire","Rebecca","Anne","Grâce","Syntiche","Véronique","Edwige","Flore","Emilienne","Charlie","Doumbia","Marshall","Olivier","Bertin","Rachelle","Sephora","Sandrine","Diane","Dorcas","Simone","Annicette","Ibrahim","Janvier","Bilé","Idriss","Florence","Viviane","Marie","Clotilde","Martine","Davilla","Chantal","Chancelle","Martilde","Chance","Léa","Léon","Aminata","Bintou","Charlène","Cécilia","N'Dira","Bética","Rosemonde","Delore","Souleymane","Aline","Ali","Sandrine","Sassandra","Cassandra","Sandra","Affoué","Amoin","Adja","Amenan","Bla"];
+    let cities=["Abidjan","Bouaké","Yamoussoukro","San Pedro","Cocody","Marcory","Treicheville","Bouna","Toulépleu","Toupah","Dabou","Guitry","Divo","Sassandra","Toumodi","Dimbokro","Issia","Grand-lahou","Sikensi","Daoukro","Lakota","Man","Gagnoa","Korhogo","Zikisso","Iré","Bonoua","Bondoukou","Fresco","Bouna","Tabou","Sinfra"];
+    let products=["Push Up Invisible"];
+
+    function showPurchase() {
+      let name = names[Math.floor(Math.random() * names.length)];
+      let city = cities[Math.floor(Math.random() * cities.length)];
+      let product = products[Math.floor(Math.random() * products.length)];
+
+      let text = "🔥 " + name + " à " + city + " vient d'acheter " + product;
+      document.getElementById("purchase-text").innerText = text;
+
+      let popup = document.getElementById("purchase-popup");
+      popup.classList.add("show");
+
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 4000);
+
+      // Relance la notification après un délai aléatoire entre 3 et 5 sec
+      let nextDelay = Math.floor(Math.random() * (5000 - 3000 + 1)) + 4000;
+      setTimeout(showPurchase, nextDelay);
+    }
+
+    // Premier lancement
+    showPurchase();
+  </script>
+
+</body>
+</html>

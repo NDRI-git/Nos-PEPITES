@@ -205,16 +205,17 @@ margin-top:30px;
 
     #purchase-popup {
       display: none;
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
+      position: fixed;
+      top: 25px;
+      left: 50px;
       background: #fff;
-      border: 2px solid rgb(250, 244, 244);
-      padding: 15px 20px;
-      border-radius: 8px;
+      border-radius: 8px rgb(250, 244, 244);
+      padding: 20px 30px;
+      border: 2px solid #f00;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       font-family: Arial, sans-serif;
       font-size: 18px;
+      text-align: center;
       z-index: 1000;
       transition: opacity 0.5s ease;
       opacity: 0;
